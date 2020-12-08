@@ -145,12 +145,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/img/'
 
 # Developer added: Static settings
-# "STATICFILES_DIRS" commented out to satisfy "python manage.py check --deploy"
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static'),
-#]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
