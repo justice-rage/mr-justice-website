@@ -1,5 +1,2 @@
 # mr-justice-website
-This project is meant to culimate in the creation of my own personal professional website utilizing Django, Bootstrap, and SQL.
-
-Project status: 
-I have succesfully created a project and blog app, but have not yet hosted the site. Eventually, this will be my personal portfolio site once finished.
+This project is my personal portfolio site. This is the first website I ever designed and created myself, and has three applications built to hold my projects, blog, and about me section.
