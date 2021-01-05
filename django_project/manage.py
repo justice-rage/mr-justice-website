@@ -6,8 +6,9 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
-    try:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                          'config.settings')  # 1) config.settings = production
+    try:                                      # 2) config.development_settings = development
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
