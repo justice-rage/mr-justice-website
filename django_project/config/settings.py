@@ -9,10 +9,9 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import os # developer installed
-import django_heroku # developer installed
-import dj_database_url # developer installed
-from decouple import config # developer installed
+import os  # developer installed
+import dj_database_url  # developer installed
+from decouple import config  # developer installed
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -65,7 +64,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates')
-                ],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,9 +89,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
-DATABASES ={
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
@@ -160,8 +159,6 @@ SECURE_SSL_REDIRECT = True
 
 
 # HSTS settings
-SECURE_HSTS_SECONDS = 31536000 # 1 year
+SECURE_HSTS_SECONDS = 31536000  # 1 year
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-django_heroku.settings(locals())
