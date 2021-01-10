@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Set DEBUG to True during development
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['127.0.0.1', 'justicewebsite.herokuapp.com']
@@ -152,10 +153,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# HTTPS settings
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# HTTPS settings # Replace True with False during development
+SESSION_COOKIE_SECURE = True  # False
+CSRF_COOKIE_SECURE = True  # False
+SECURE_SSL_REDIRECT = True  # False
 
 
 # HSTS settings

@@ -32,91 +32,44 @@
         </nav>
       </div>
     </header>
-    <<<<<<< HEAD </head>
+    </head>
+
+    <hr class="divider">
+
+    <body>
+
+      <div class="container">
+        {% block content %}
+
+        {% endblock %}
+      </div>
 
       <hr class="divider">
 
-      <body>
-
-        <div class="container">
-          {% block content %}
-
-          {% endblock %}
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Designed & Built by <a href="https://github.com/mr-justice/mr-justice-website" target="_blank">Justice
+              Douglas</a></p>
         </div>
+      </footer>
 
-        <hr class="divider">
+      <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
-        <footer class="mastfoot mt-auto">
-          <div class="inner">
-            <p>Designed & Built by <a href="https://github.com/mr-justice/mr-justice-website" target="_blank">Justice
-                Douglas</a></p>
-          </div>
-        </footer>
+      <!-- Custom JS -->
 
-        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-          crossorigin="anonymous"></script>
+      <!-- Navigation buttons have active state when coinciding page is loaded -->
+      <script type="text/javascript">
+        var loc = window.location.pathname;
 
-        <!-- Custom JS -->
+        $('.testing').find('a').each(function () {
+          $(this).toggleClass('active', $(this).attr('href') == loc);
+        });
+      </script>
 
-        <!-- Navigation buttons have active state when coinciding page is loaded -->
-        <script type="text/javascript">
-          var loc = window.location.pathname;
-
-          $('.testing').find('a').each(function () {
-            $(this).toggleClass('active', $(this).attr('href') == loc);
-          });
-        </script>
-
-      </body>
-      =======
-
-      </head>
-
-      <hr class="divider">
-
-      <body>
-
-        <div class="container">
-          {% block content %}
-
-          {% endblock %}
-        </div>
-
-        <hr class="divider">
-
-        <footer class="mastfoot mt-auto">
-          <div class="inner">
-            <p>Designed & Built by <a href="https://github.com/mr-justice/mr-justice-website" target="_blank">Justice
-                Douglas</a></p>
-          </div>
-        </footer>
-
-        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-          crossorigin="anonymous"></script>
-
-        <!-- Custom JS -->
-
-        <!-- Navigation buttons have active state when coinciding page is loaded -->
-        <script type="text/javascript">
-          var loc = window.location.pathname;
-
-          $('.testing').find('a').each(function () {
-            $(this).toggleClass('active', $(this).attr('href') == loc);
-          });
-        </script>
-
-      </body>
-
-      >>>>>>> 9e196d17d253eac92aac3431848c44ffe61ff4c6
-
-</html>
+    </body>
